@@ -17,6 +17,7 @@ ENV OTP_BASE /var/otp
 ENV OTP_GRAPHS /var/otp/graphs
 
 RUN \
+  mkdir -p /var/otp/scripting && \
   mkdir -p /var/otp/graphs/detroit && \
   wget -O /var/otp/graphs/detroit/ddot.zip http://www.detroitmi.gov/Portals/0/docs/deptoftransportation/pdfs/ddot_gtfs.zip && \
   wget -P /var/otp/graphs/detroit https://s3.amazonaws.com/metro-extracts.mapzen.com/detroit_michigan.osm.pbf && \
