@@ -20,6 +20,7 @@ RUN \
   mkdir -p /var/otp/scripting && \
   mkdir -p /var/otp/graphs/detroit && \
   wget -O /var/otp/graphs/detroit/ddot.zip http://www.detroitmi.gov/Portals/0/docs/deptoftransportation/pdfs/ddot_gtfs.zip && \
+  wget -O /var/otp/graphs/detroit/smart.zip http://apps.smartbus.org/gtfs/SMART_GTFS.zip && \ 
   wget -P /var/otp/graphs/detroit https://s3.amazonaws.com/metro-extracts.mapzen.com/detroit_michigan.osm.pbf && \
   java -Xmx8G -jar /var/otp/otp.jar --build /var/otp/graphs/detroit
 
